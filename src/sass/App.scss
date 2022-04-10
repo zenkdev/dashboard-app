@@ -1,0 +1,10 @@
+@import 'variables';
+
+.app__container {
+  max-width: 1440px;
+  max-height: 574px;
+  margin: 20px auto 0;
+  border-radius: 20px;
+  box-shadow: 0 33px 43px rgba(0, 0, 0, 0.1), 0 9.94853px 12.9632px rgba(0, 0, 0, 0.0651589),
+    0 4.13211px 5.38427px rgba(0, 0, 0, 0.05), 0 1.4945px 1.94738px rgba(0, 0, 0, 0.0348411);
+}
