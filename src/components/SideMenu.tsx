@@ -1,33 +1,32 @@
-import '../sass/SideMenu.scss';
-
 import React from 'react';
+import sprite from '../img/sprite.svg';
+import '../sass/SideMenu.scss';
+import { RowFiler } from '../services';
+import SideMenuOption from './SideMenuOption';
 
 function SideMenu() {
   return (
     <aside className="side-menu">
       <button className="side-menu__button">Create new</button>
       <ul className="side-menu__list">
-        <li className="side-menu__list-item side-menu__list-item--even">
-          <label>
-            Even rows of data
-            <span>Display rows 2,4,6 etc</span>
-            <input className="visually-hidden" type="radio" value="even" radioGroup="options" />
-          </label>
-        </li>
-        <li className="side-menu__list-item side-menu__list-item--odd">
-          <label>
-            Odd rows of data
-            <span>Display rows 1,3,5 etc</span>
-            <input className="visually-hidden" type="radio" value="odd" radioGroup="options" />
-          </label>
-        </li>
-        <li className="side-menu__list-item side-menu__list-item--all">
-          <label>
-            All data
-            <span>Display all data</span>
-            <input className="visually-hidden" type="radio" value="all" radioGroup="options" checked={true} />
-          </label>
-        </li>
+        <SideMenuOption
+          value={RowFiler.Even}
+          caption="Even rows of data"
+          subCaption="Display rows 2,4,6 etc"
+          icon={`${sprite}#chart-donut`}
+        />
+        <SideMenuOption
+          value={RowFiler.Odd}
+          caption="Odd rows of data"
+          subCaption="Display rows 1,3,5 etc"
+          icon={`${sprite}#check-outline`}
+        />
+        <SideMenuOption
+          value={RowFiler.All}
+          caption="All data"
+          subCaption="Display all data"
+          icon={`${sprite}#print`}
+        />
       </ul>
     </aside>
   );

@@ -55,6 +55,11 @@
   align-items: center;
   letter-spacing: 0.44px;
   color: $color-dark;
+  cursor: pointer;
+
+  label {
+    cursor: inherit;
+  }
 
   span {
     display: block;
@@ -68,26 +73,28 @@
     color: $color-gray-80;
   }
 
+  input[type='radio'] {
+    display: none;
+  }
+
   &:first-child {
     margin-bottom: 8px;
   }
 
-  &:before {
-    display: block;
-    width: 28px;
-    height: 28px;
-    margin: 0 12px;
-  }
+  &--active {
+    background: $color-blue-smooth;
+    border-radius: 10px;
 
-  &--even:before {
-    content: url('../img/chart-donut.svg');
+    .side-menu__list-item-icon {
+      fill: $color-blue-base;
+    }
   }
+}
 
-  &--odd:before {
-    content: url('../img/check-outline.svg');
-  }
-
-  &--all:before {
-    content: url('../img/print.svg');
-  }
+.side-menu__list-item-icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 0 12px;
+  fill: #78909c;
 }
