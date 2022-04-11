@@ -7,13 +7,13 @@ function Navigation() {
     <nav className="main-nav">
       <ul className="main-nav__list">
         <li className="main-nav__list-item main-nav__list-item--active">
-          <a href="#">Analyze</a>
+          <span>Analyze</span>
         </li>
         <li className="main-nav__list-item">
-          <a href="#">My campaigns</a>
+          <span>My campaigns</span>
         </li>
         <li className="main-nav__list-item">
-          <a href="#">Configure</a>
+          <span>Configure</span>
         </li>
       </ul>
     </nav>
