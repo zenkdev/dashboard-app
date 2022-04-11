@@ -23,6 +23,7 @@
   background: $color-white-base;
   box-shadow: 0 16px 24px rgba(54, 123, 245, 0.16), 0 6px 12px rgba(54, 123, 245, 0.16);
   border-radius: 99px;
+  cursor: pointer;
 
   &:before {
     content: url('../img/plus-circle.svg');

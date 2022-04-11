@@ -16,10 +16,9 @@ function FooterCell({ data }: FooterCellProps) {
     (evt: ChangeEvent<HTMLInputElement>) => {
       const nextValue = evt.target.value;
       setValue(nextValue);
-      console.log('handleChange', nextValue);
       debounced(nextValue);
     },
-    [searchText, setSearchText],
+    [debounced],
   );
   return (
     <td className="footer-cell">

@@ -12,6 +12,11 @@
   padding: 12px 16px 0;
 }
 
+.app-header__link {
+  display: flex;
+  text-decoration: none;
+}
+
 .app-header__logo {
   display: block;
   width: 40px;
@@ -38,6 +43,7 @@
   margin-right: 16px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   &--help {
     margin-left: auto;
@@ -53,9 +59,10 @@
     align-items: center;
     letter-spacing: 0.44px;
     color: $color-gray-80;
+    text-decoration: none;
 
     &:after {
-      content: url("../img/help-circle.svg");
+      content: url('../img/help-circle.svg');
       display: block;
       width: 28px;
       height: 28px;
