@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dashboard-app/static/css/main.80bd7f8b.css",
-    "main.js": "/dashboard-app/static/js/main.440a254b.js",
+    "main.js": "/dashboard-app/static/js/main.4529c27c.js",
     "static/js/787.92af229c.chunk.js": "/dashboard-app/static/js/787.92af229c.chunk.js",
     "static/media/logo.svg": "/dashboard-app/static/media/logo.736495fa46991cdf4b1f8b8c05bed485.svg",
     "static/media/sprite.svg": "/dashboard-app/static/media/sprite.d7067987ade5e71e0c28b934a5b4f8b0.svg",
@@ -12,11 +12,11 @@
     "static/media/download.svg": "/dashboard-app/static/media/download.357f425c667060299e4b.svg",
     "static/media/vector.svg": "/dashboard-app/static/media/vector.499d5bdad0e35e13213e.svg",
     "main.80bd7f8b.css.map": "/dashboard-app/static/css/main.80bd7f8b.css.map",
-    "main.440a254b.js.map": "/dashboard-app/static/js/main.440a254b.js.map",
+    "main.4529c27c.js.map": "/dashboard-app/static/js/main.4529c27c.js.map",
     "787.92af229c.chunk.js.map": "/dashboard-app/static/js/787.92af229c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.80bd7f8b.css",
-    "static/js/main.440a254b.js"
+    "static/js/main.4529c27c.js"
   ]
 }
