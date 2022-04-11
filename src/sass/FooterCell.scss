@@ -1,0 +1,22 @@
+@import 'variables';
+
+.footer-cell:not(:first-child) {
+  padding-left: 32px;
+}
+
+.footer-cell__search {
+  height: 32px;
+  width: 100%;
+  padding: 6px 12px;
+  margin: 0;
+  background-color: unset;
+  border: 1px solid $color-gray-40;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: $color-dark;
+}

@@ -1,31 +1,23 @@
 import classNames from 'classnames';
-import React, { useContext } from 'react';
+import React from 'react';
 
 import { useData } from '../hooks/useData';
-import sort from '../img/sort.svg';
 import '../sass/DataGrid.scss';
-import { MainContext } from './Main';
+import FooterCell from './FooterCell';
+import HeaderCell from './HeaderCell';
 
 interface DataGridProps {
   className?: string;
 }
 
 function DataGrid(props: DataGridProps) {
-  const { rowFilter } = useContext(MainContext);
-  const { headers, data } = useData(rowFilter);
+  const { headers, data } = useData();
   return (
     <table className={classNames('data-grid', props.className)}>
       <thead>
         <tr className="data-grid__header">
-          {headers.map(({ caption, propertyName, sortable }) => (
-            <th key={propertyName} className={sortable ? 'sortable' : ''}>
-              {sortable && (
-                <span>
-                  <img src={sort} width="16" height="46" alt="sort" />
-                </span>
-              )}
-              {caption}
-            </th>
+          {headers.map(header => (
+            <HeaderCell key={header.propertyName} data={header} />
           ))}
         </tr>
       </thead>
@@ -40,10 +32,8 @@ function DataGrid(props: DataGridProps) {
       </tbody>
       <tfoot>
         <tr className="data-grid__footer">
-          {headers.map(({ propertyName, searchPlaceholder }) => (
-            <td key={propertyName}>
-              <input type="text" size={5} placeholder={searchPlaceholder} />
-            </td>
+          {headers.map(header => (
+            <FooterCell key={header.propertyName} data={header} />
           ))}
         </tr>
       </tfoot>

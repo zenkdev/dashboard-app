@@ -5,40 +5,6 @@
   border-collapse: collapse;
 }
 
-.data-grid__header {
-  th {
-    width: 118px;
-    height: 48px;
-    text-align: right;
-    font-family: 'Quicksand', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.44px;
-    color: $color-gray-60;
-    border-bottom: 2px solid $color-gray-30;
-
-    &.sortable {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-
-    &:first-child {
-      width: auto;
-      text-align: left;
-    }
-
-    span {
-      display: inline-block;
-      width: 16px;
-      height: 46px;
-      margin-right: 8px;
-    }
-  }
-}
-
 .data-grid__row {
   &:not(:last-child) {
     border-bottom: 1px solid $color-gray-30;

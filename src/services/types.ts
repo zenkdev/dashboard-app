@@ -1,7 +1,8 @@
 export interface Header {
   caption: string;
   propertyName: keyof Row;
-  sortable?: boolean;
+  allowSort?: boolean;
+  allowSearch?: boolean;
   searchPlaceholder?: string;
 }
 
@@ -22,4 +23,10 @@ export enum RowFiler {
   Even,
   Odd,
   All,
+}
+
+export enum SortOrder {
+  None = 'none',
+  Ascending = 'ascending',
+  Descending = 'descending',
 }
