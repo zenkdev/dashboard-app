@@ -1,17 +1,19 @@
 import React, { ChangeEvent, useCallback, useContext, useState } from 'react';
 import { useDebounce } from '../hooks/useDebounce';
+import { updateSearchText } from '../reducer';
 import { Header } from '../services';
-import { MainContext } from './Main';
+import { AppContext, AppDispatchContext } from './AppContext';
 
 interface FooterCellProps {
   data: Header;
 }
 
 function FooterCell({ data }: FooterCellProps) {
-  const { allowSearch } = data;
-  const { searchText, setSearchText } = useContext(MainContext);
-  const debounced = useDebounce(setSearchText, 300);
-  const [value, setValue] = useState(allowSearch ? searchText : undefined);
+  const { allowSearch, propertyName } = data;
+  const { searchText } = useContext(AppContext);
+  const dispatch = useContext(AppDispatchContext);
+  const debounced = useDebounce((searchText: string) => dispatch(updateSearchText(propertyName, searchText)), 300);
+  const [value, setValue] = useState(searchText[propertyName]);
   const handleChange = useCallback(
     (evt: ChangeEvent<HTMLInputElement>) => {
       const nextValue = evt.target.value;

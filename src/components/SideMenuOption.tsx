@@ -1,20 +1,22 @@
 import classNames from 'classnames';
 import React, { useCallback, useContext } from 'react';
-import { RowFiler } from '../services';
-import { MainContext } from './Main';
+import { updateRowFilter } from '../reducer';
+import { RowFilter } from '../services';
+import { AppContext, AppDispatchContext } from './AppContext';
 
 interface SideMenuOptionProps {
-  value: RowFiler;
+  value: RowFilter;
   caption: string;
   subCaption: string;
   icon: string;
 }
 
 function SideMenuOption({ value, caption, subCaption, icon }: SideMenuOptionProps) {
-  const { rowFilter, setRowFilter } = useContext(MainContext);
+  const { rowFilter } = useContext(AppContext);
+  const dispatch = useContext(AppDispatchContext);
   const handleChange = useCallback(() => {
-    setRowFilter(value);
-  }, [setRowFilter, value]);
+    dispatch(updateRowFilter(value));
+  }, [dispatch, value]);
   const checked = rowFilter === value;
   const className = classNames('side-menu__list-item', { 'side-menu__list-item--active': checked });
 

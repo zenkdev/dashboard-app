@@ -19,7 +19,7 @@ export interface Row {
 
 export type Data = Row[];
 
-export enum RowFiler {
+export enum RowFilter {
   Even,
   Odd,
   All,
